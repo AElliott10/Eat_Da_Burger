@@ -19,7 +19,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "express-static": "^1.2.6",
     "handlebars": "^4.5.3",
+    "heroku": "^7.35.0",
     "method-override": "^3.0.0",
     "mysql": "^2.17.1"
   }

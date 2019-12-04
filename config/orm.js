@@ -13,7 +13,7 @@ var orm = {
   },
 
 
-update: function (tableInput, condition, cb) {
+  update: function (tableInput, condition, cb) {
     connection.query('UPDATE ' + tableInput + ' SET devoured=true WHERE id= ' + condition + ';', function (err, result) {
       if (err) throw err;
       cb(result);
@@ -21,14 +21,17 @@ update: function (tableInput, condition, cb) {
   },
 
   //Create method
-  create: function (tableInput, val, cb) {
-    connection.query('INSERT INTO ' + tableInput + ' (burger_name)',
-      VALUES('"+val+"'), ';', function (err, result) {
-        if (err) throw err;
-        cb(result);
-      })
+  create: function (tableName, burgerName, cb) {
+    var sqlCommand = `INSERT INTO ${tableName} (burger_name) VALUES ("${burgerName}")`;
+    connection.query(sqlCommand, function (err, result) {
+      if (err) {
+        console.log(err);
+        throw err;
+      }
+      console.log("RECORD INSERTED FOR CREATE FN() :", result);
+      cb();
+    });
   }
-
 }
 
 // Export the orm object for the model (burgers.js).

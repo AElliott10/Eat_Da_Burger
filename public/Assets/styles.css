@@ -1,20 +1,12 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
+body {
+ 
+  background-color: turquoise;
+}
+
+.container {
+  position: relative;
   
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
+  text-align: center;
+ 
+}
   

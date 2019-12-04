@@ -3,12 +3,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride =require("method-override");
 var exphbs = require("express-handlebars");
+var images = require("express-static")
 
 // Section II: Serve static content for the app from the "public" directory in the application directory.
 
 var app = express();
 app.use(express.static(__dirname + "/public"));//double underscore for __dirname not a single one _dirname
-
+app.use(express.static('views/images'));
 // Parse application body
 app.use(bodyParser.urlencoded({
   extended:false

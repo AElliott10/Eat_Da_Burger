@@ -18,7 +18,7 @@
   "homepage": "https://github.com/AElliott10/Eat_Da_Burger#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^5.3.1",
     "express-static": "^1.2.6",
     "handlebars": "^4.5.3",
     "heroku": "^7.35.0",
